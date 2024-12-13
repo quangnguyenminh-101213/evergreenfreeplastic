@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>EverGreen Free Plastic</title>
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- fonts awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <script>
+    function showAlert(value) {
+        alert("Giá trị của thanh này là: " + value);
+    }
+
+    function setTooltipDescriptions() {
+        const descriptions = {
+            "2.6%": "Dỏ nhựa dùng 1 lần - Tỉ lệ rất nhỏ trong tổng thành phần.",
+            "3.3%": "Dây nhựa đóng hàng - Phổ biến trong ngành vận chuyển.",
+            "3.7%": "Mảnh nhựa khác - Góp phần nhỏ vào ô nhiễm.",
+            "7.7%": "Mảnh nhựa mềm - Dễ thấy tại các bãi biển.",
+            "10.5%": "Ngư cụ 2 - Tỉ lệ đáng chú ý.",
+            "11.3%": "Túi ni-lông cỡ 1 - Thường được sử dụng hàng ngày.",
+            "12.3%": "Ống hút nhựa - Đang giảm sử dụng trong xu hướng hiện nay.",
+            "12.4%": "Mảnh nhựa cứng - Góp phần đáng kể vào ô nhiễm.",
+            "22.3%": "Ngư cụ 1 - Thành phần lớn nhất tại miền Bắc.",
+            "2.8%": "Bao gói thực phẩm - Nhỏ nhưng đáng chú ý.",
+            "3.5%": "Bao bì bánh kẹo - Khá phổ biến.",
+            "4.2%": "Nhựa khác - Dễ bị lẫn lộn.",
+            "15.7%": "Ngư cụ 1 - Đáng kể trong miền Trung.",
+            "21.7%": "Mảnh nhựa mềm - Lớn nhất tại miền Trung.",
+            "1%": "Bao gói thực phẩm - Rất ít tại miền Nam.",
+            "2%": "Bao bì nhựa khác - Nhỏ gọn.",
+            "6%": "Túi ni-lông cỡ 1 - Đáng lưu ý.",
+            "18%": "Mảnh nhựa mềm - Thành phần lớn nhất tại miền Nam."
+        };
+
+        const bars = document.querySelectorAll('.bar-value');
+        bars.forEach(bar => {
+            const value = bar.textContent;
+            const tooltip = bar.querySelector('.tooltip');
+            if (tooltip && descriptions[value]) {
+                tooltip.textContent = descriptions[value];
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', setTooltipDescriptions);
+</script>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="contact_nav_container">
+        <div class="container">
+          <div class="contact_nav">
+            <a href="">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                Address : FPT School Thanh Hóa
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                Email : vanfth20064@gmail.com
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+          </div>
+          <div id="myNav" class="overlay">
+            <div class="menu_btn-style ">
+              <button onclick="closeNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+            </div>
+            <div class="overlay-content">
+              <a class="active" href="index.html"> Tổng quan <span class="sr-only">(current)</span></a>
+              <a class="" href="about.html"> Chất thải nhựa </a>
+              <a class="" href="why.html"> Mô phỏng </a>
+              <a class="" href="team.html"> Tác động & rủi ro </a>
+              <a class="" href="testimonial.html"> Hành động & cơ hội </a>
+              <a class="" href="contact.html"> Liên hệ </a>
+            </div>
+          </div>
+          <a class="navbar-brand" href="index.html">
+            <span>
+              EverGreen Free Plastic
+            </span>
+          </a>
+          <div class="user_option">
+
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section position-relative">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+          <li data-target="#customCarousel1" data-slide-to="1"></li>
+          <li data-target="#customCarousel1" data-slide-to="2"></li>
+          <li data-target="#customCarousel1" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="box">
+              <div class="baby_detail">
+                <div class="baby_text">
+                  <h2>
+                    tương lai <br />
+                    trái đất xanh
+                  </h2>
+                </div>
+                <a href="">
+                  Read More
+                </a>
+              </div>
+              <div class="care_detail">
+                <a href="">
+                  Contact Us
+                </a>
+                <div class="care_text">
+                  <h2>
+                    We will take <br />
+                    care Plastic <br />
+                    warning
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="box">
+              <div class="baby_detail">
+                <div class="baby_text">
+                  <h2>
+                    tương lai <br />
+                    trái đất xanh
+                  </h2>
+                </div>
+                <a href="">
+                  Read More
+                </a>
+              </div>
+              <div class="care_detail">
+                <a href="">
+                  Contact Us
+                </a>
+                <div class="care_text">
+                  <h2>
+                    We will take <br />
+                    Care of <br />
+                    your Baby
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="box">
+              <div class="baby_detail">
+                <div class="baby_text">
+                  <h2>
+                    baby <br />
+                    Care center
+                  </h2>
+                </div>
+                <a href="">
+                  Read More
+                </a>
+              </div>
+              <div class="care_detail">
+                <a href="">
+                  Contact Us
+                </a>
+                <div class="care_text">
+                  <h2>
+                    We will take <br />
+                    Care of <br />
+                    your Baby
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="box">
+              <div class="baby_detail">
+                <div class="baby_text">
+                  <h2>
+                    baby <br />
+                    Care center
+                  </h2>
+                </div>
+                <a href="">
+                  Read More
+                </a>
+              </div>
+              <div class="care_detail">
+                <a href="">
+                  Contact Us
+                </a>
+                <div class="care_text">
+                  <h2>
+                    We will take <br />
+                    Care of <br />
+                    your Baby
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- service section -->
+
+  <section class="service_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/service1.png" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>
+                Tác Động Của Rác Thải Nhựa
+              </h5>
+              <p>
+                Nhựa là một trong những nguyên nhân chính gây ô nhiễm môi trường, với hàng triệu tấn nhựa bị thải ra đại dương mỗi năm, gây hại cho động vật và hệ sinh thái biển.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="box ">
+            <div class="img-box">
+              <img src="images/service2.png" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>
+                Nhựa Và Quá Trình Phân Hủy
+              </h5>
+              <p>
+                Nhựa mất hàng trăm năm để phân hủy, biến thành vi nhựa nhỏ có thể xâm nhập vào thực phẩm, ảnh hưởng đến sức khỏe con người và động vật.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/service3.png" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>
+                Giải Pháp Quản Lý Nhựa
+              </h5>
+              <p>
+                Giảm sử dụng nhựa, tái chế và thay thế bằng vật liệu phân hủy sinh học là các giải pháp hiệu quả để giảm thiểu ô nhiễm nhựa.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/service4.png" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>
+                Môi Trường Và Biến Đổi Khí Hậu
+              </h5>
+              <p>
+                Biến đổi khí hậu do khí nhà kính là một thách thức lớn. Năng lượng tái tạo và giảm khí thải là các giải pháp cần thiết để bảo vệ hành tinh.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container-fluid">
+      <div class="box">
+        <div class="img-box">
+          <img src="images/about-img.png" alt="" />
+        </div>
+        <div class="detail-box">
+          <h2>
+            About Us
+          </h2>
+          <p>
+            EverGreen Free Plastics là một nền tảng trực tuyến tương tác do nhóm học sinh phát triển nhằm nâng cao nhận thức và cung cấp thông tin chính xác về môi trường. Chúng tôi tập trung vào các giải pháp xanh và bền vững, đặc biệt là trong việc giảm thiểu rác thải nhựa. Với sứ mệnh xây dựng một cộng đồng hiểu biết và hành động vì môi trường, EverGreen kết nối mọi người với dữ liệu, phân tích và các thực hành tốt nhất để hướng tới một tương lai xanh sạch hơn.
+          </p>
+          <a href="">
+            <span>
+              Read More
+            </span>
+            <hr />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- we have section -->
+
+  <section class="wehave_section">
+    <div class="container-fluid">
+      <div class="box">
+        <div class="detail-box">
+          <!-- Chart 1: Biển miền Bắc -->
+    <div class="chart-container">
+      <div class="chart-title">Thành phần CTN ở các bờ biển miền Bắc</div>
+      <div class="bar">
+          <div class="bar-label">Dỏ nhựa dùng 1 lần</div>
+          <div class="bar-value" style="width: 2.6%;" onclick="showAlert('2.6%')">2.6%<span class="tooltip">2.6%</span></div>
+      </div>
+      <div class="bar">
+          <div class="bar-label">Dây nhựa đóng hàng</div>
+          <div class="bar-value" style="width: 3.3%;" onclick="showAlert('3.3%')">3.3%<span class="tooltip">3.3%</span></div>
+      </div>
+      <div class="bar">
+          <div class="bar-label">Mảnh nhựa khác</div>
+          <div class="bar-value" style="width: 3.7%;" onclick="showAlert('3.7%')">3.7%<span class="tooltip">3.7%</span></div>
+      </div>
+      <div class="bar">
+          <div class="bar-label">Mảnh nhựa mềm</div>
+          <div class="bar-value" style="width: 7.7%;" onclick="showAlert('7.7%')">7.7%<span class="tooltip">7.7%</span></div>
+      </div>
+      <div class="bar">
+          <div class="bar-label">Ngư cụ 2</div>
+          <div class="bar-value" style="width: 10.5%;" onclick="showAlert('10.5%')">10.5%<span class="tooltip">10.5%</span></div>
+      </div>
+      <div class="bar">
+          <div class="bar-label">Túi ni-lông cỡ 1</div>
+          <div class="bar-value" style="width: 11.3%;" onclick="showAlert('11.3%')">11.3%<span class="tooltip">11.3%</span></div>
+      </div>
+      <div class="bar">
+          <div class="bar-label">Ống hút nhựa</div>
+          <div class="bar-value" style="width: 12.3%;" onclick="showAlert('12.3%')">12.3%<span class="tooltip">12.3%</span></div>
+      </div>
+      <div class="bar">
+          <div class="bar-label">Mảnh nhựa cứng</div>
+          <div class="bar-value" style="width: 12.4%;" onclick="showAlert('12.4%')">12.4%<span class="tooltip">12.4%</span></div>
+      </div>
+      <div class="bar">
+          <div class="bar-label">Ngư cụ 1</div>
+          <div class="bar-value" style="width: 22.3%;" onclick="showAlert('22.3%')">22.3%<span class="tooltip">22.3%</span></div>
+      </div>
+  </div>
+
+        </div>
+        <div class="detail-box">
+          <div class="chart-container">
+            <div class="chart-title">Thành phần CTN ở các bờ biển miền Trung</div>
+            <div class="bar">
+                <div class="bar-label">Bao gói thực phẩm</div>
+                <div class="bar-value-orange bar-value" style="width: 2.8%;" onclick="showAlert('2.8%')">2.8%<span class="tooltip">2.8%</span></div>
+            </div>
+            <div class="bar">
+                <div class="bar-label">Ống hút nhựa</div>
+                <div class="bar-value-orange bar-value" style="width: 3.3%;" onclick="showAlert('3.3%')">3.3%<span class="tooltip">3.3%</span></div>
+            </div>
+            <div class="bar">
+                <div class="bar-label">Bao bì bánh kẹo</div>
+                <div class="bar-value-orange bar-value" style="width: 3.5%;" onclick="showAlert('3.5%')">3.5%<span class="tooltip">3.5%</span></div>
+            </div>
+            <div class="bar">
+                <div class="bar-label">Nhựa khác</div>
+                <div class="bar-value-orange bar-value" style="width: 4.2%;" onclick="showAlert('4.2%')">4.2%<span class="tooltip">4.2%</span></div>
+            </div>
+            <div class="bar">
+                <div class="bar-label">Ngư cụ 1</div>
+                <div class="bar-value-orange bar-value" style="width: 15.7%;" onclick="showAlert('15.7%')">15.7%<span class="tooltip">15.7%</span></div>
+            </div>
+            <div class="bar">
+                <div class="bar-label">Ngư cụ 2</div>
+                <div class="bar-value-orange bar-value" style="width: 15.8%;" onclick="showAlert('15.8%')">15.8%<span class="tooltip">15.8%</span></div>
+            </div>
+            <div class="bar">
+                <div class="bar-label">Mảnh nhựa mềm</div>
+                <div class="bar-value-orange bar-value" style="width: 21.7%;" onclick="showAlert('21.7%')">21.7%<span class="tooltip">21.7%</span></div>
+            </div>
+        </div>
+        </div>
+
+        <div class="detail-box">
+      <!-- Chart 3: Biển miền Nam -->
+    <div class="chart-container">
+      <div class="chart-title">Thành phần CTN ở các bờ biển Nam Bộ</div>
+      <div class="bar">
+          <div class="bar-label">Bao gói thực phẩm</div>
+          <div class="bar-value" style="width: 1%;" onclick="showAlert('1%')">1%<span class="tooltip">1%</span></div>
+      </div>
+      <div class="bar">
+          <div class="bar-label">Bao bì nhựa khác</div>
+          <div class="bar-value" style="width: 2%;" onclick="showAlert('2%')">2%<span class="tooltip">2%</span></div>
+      </div>
+      <div class="bar">
+          <div class="bar-label">Túi ni-lông cỡ 1</div>
+          <div class="bar-value" style="width: 6%;" onclick="showAlert('6%')">6%<span class="tooltip">6%</span></div>
+      </div>
+      <div class="bar">
+          <div class="bar-label">Mảnh nhựa cứng</div>
+          <div class="bar-value" style="width: 8%;" onclick="showAlert('8%')">8%<span class="tooltip">8%</span></div>
+      </div>
+      <div class="bar">
+          <div class="bar-label">Hộp xốp đựng thức ăn</div>
+          <div class="bar-value" style="width: 10%;" onclick="showAlert('10%')">10%<span class="tooltip">10%</span></div>
+      </div>
+      <div class="bar">
+          <div class="bar-label">Ngư cụ 1</div>
+          <div class="bar-value" style="width: 12%;" onclick="showAlert('12%')">12%<span class="tooltip">12%</span></div>
+      </div>
+      <div class="bar">
+          <div class="bar-label">Ngư cụ 2</div>
+          <div class="bar-value" style="width: 15%;" onclick="showAlert('15%')">15%<span class="tooltip">15%</span></div>
+      </div>
+      <div class="bar">
+          <div class="bar-label">Mảnh nhựa mềm</div>
+          <div class="bar-value" style="width: 18%;" onclick="showAlert('18%')">18%<span class="tooltip">18%</span></div>
+      </div>
+      </div>
+        </div>
+      </div>
+    </div>
+    <h5>CTN: Chất Thải Nhựa</h5>
+  </section>
+
+  <!-- end we have section -->
+
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="info_link_box">
+            <h5>
+              Navigation
+            </h5>
+            <div class="info_links">
+              <a class="active" href="index.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Tổng quan <span class="sr-only">(current)</span></a>
+              <a class="" href="about.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Chất thải nhựa</a>
+              <a class="" href="why.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Mô phỏng </a>
+              <a class="" href="team.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Tác động & rủi ro</a>
+              <a class="" href="testimonial.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Hành động & cơ hội</a>
+              <a class="" href="contact.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Liên hệ</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5>
+            Newsletter
+          </h5>
+          <form action="">
+            <input type="text" placeholder="Enter Your email" />
+            <button type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <footer class="footer_section container-fluid">
+  </footer>
+  <!-- footer section -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="js/custom.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>EverGreen</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- fonts awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <script src="js/mapdata.js"></script>
+  <script src="js/countrymap.js"></script>
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="contact_nav_container">
+        <div class="container">
+          <div class="contact_nav">
+            <a href="">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                Address : FPT School Thanh Hóa
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                Email : vanfth20064@gmail.com
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+          </div>
+          <div id="myNav" class="overlay">
+            <div class="menu_btn-style ">
+              <button onclick="closeNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+            </div>
+            <div class="overlay-content">
+              <a class="" href="index.html"> Tổng quan <span class="sr-only">(current)</span></a>
+              <a class="" href="about.html"> Chất thải nhựa</a>
+              <a class="active" href="why.html"> Mô phỏng </a>
+              <a class="" href="team.html"> Tác động & Rủi ro</a>
+              <a class="" href="testimonial.html"> Hành động & Cơ hội</a>
+              <a class="" href="contact.html"> Liên hệ</a>
+            </div>
+          </div>
+          <a class="navbar-brand" href="index.html">
+            <span>
+              EverGreen
+            </span>
+          </a>
+          <div class="user_option">
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+
+
+  <!-- why section -->
+
+<body>
+  <section class="about_section layout_padding">
+    <div class="img-fluid">
+      <div class="box">
+        <div class="img-box">
+          <h2>
+            Diễn Biến Khối Lượng Chất Thải Nhựa Phát Sinh
+          </h2>
+          <p>Khối lượng CTN có xu hướng tăng trong thời gian gần đây (xấp xỉ 2,7 triệu tấn vào năm 2018; 2,83 triệu tấn 
+            vào năm 2019; khoảng 2,93 triệu tấn vào năm 2021) (Bảng 2.2). Khối lượng CTN phát sinh có xu hướng 
+            tăng lên trong giai đoạn 2018 - 2021 ở các vùng kinh tế, đặc biệt tại khu vực Tây Nguyên, Bắc Trung Bộ 
+            và Duyên Hải Nam Trung Bộ, ĐBSCL.</p>
+          
+        </div>
+        <div class="detail-box">
+    <h3>Khối lượng CTN: Địa phương trong Việt Nam (2010 - 2021)</h3>
+    <p>Khối lượng CTN phát sinh và chỉ số phát sinh CTN giai đoạn 2010 - 2021 tại các địa phương</p>
+    <canvas id="barChart" class="barchart-container" style="width: 600; height: 300px"></canvas>
+    <div id="color-scale" class="color-scale-container"></div>
+
+    <script>
+      // Color scale configuration
+      const maxValue = 1000;
+      const minValue = 23;
+      const steps = 10; // Number of intervals in the scale
+
+      // Create a linear color scale from red (max) to yellow to green (min)
+      const colorScale = d3.scaleLinear()
+          .domain([minValue, (maxValue + minValue) / 2, maxValue]) // Min = 23, Mid = (23+00)/2, Max = 1000
+          .range(["#61ae37", "#ffff00", "#ff0000"]); // From green (min) to yellow to red (max)
+
+      // Select the container
+      const colorScaleContainer = d3.select("#color-scale");
+
+      // Generate the color scale with labels
+      for (let i = 0; i <= steps; i++) {
+          const value = minValue + (i / steps) * (maxValue - minValue);
+          const formattedValue = Math.round(value);
+
+          const colorBox = colorScaleContainer.append("div")
+              .attr("class", "color-box");
+
+          // Add color box
+          colorBox.append("div")
+              .style("background", colorScale(value));
+
+          // Add label
+          colorBox.append("span")
+              .text(`${formattedValue}`);
+      }
+  </script>
+    <div id="map"></div>
+    
+ <small>Nguồn: Báo cáo hiện trạng môi trường quốc gia năm 2019 và Kết quả tính toán dựa trên số liệu báo 
+  cáo công tác bảo vệ môi trường năm 2021 của các tỉnh, thành phố trực thuộc Trung ương</small> 
+
+        </div>
+      </div>
+</body>
+
+  <!-- end why section -->
+
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="info_link_box">
+            <h5>
+              Navigation
+            </h5>
+            <div class="info_links">
+              <a class="" href="index.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Tổng quan <span class="sr-only">(current)</span></a>
+              <a class="" href="about.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Chất thải nhựa</a>
+              <a class="active" href="why.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Mô phỏng </a>
+              <a class="" href="team.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Tác động & rủi ro</a>
+              <a class="" href="testimonial.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Hành động & cơ hội</a>
+              <a class="" href="contact.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Liên hệ</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5>
+            Newsletter
+          </h5>
+          <form action="">
+            <input type="text" placeholder="Enter Your email" />
+            <button type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <footer class="footer_section container-fluid">
+  </footer>
+  <!-- footer section -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="js/custom.js"></script>
+
+</body>
+
+</html>
